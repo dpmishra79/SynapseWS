@@ -1,0 +1,17 @@
+{
+	"name": "ComparePolyCopyINTO",
+	"properties": {
+		"content": {
+			"query": "-- Use COPY to load text file with non-standard row delimiters\n-- POLYBASE can't handle non-standard row delimiter\n\nCREATE TABLE [wwi_staging].DailySalesCounts\n    (\n        [Date] [int]  NOT NULL,\n        [NorthAmerica] [int]  NOT NULL,\n        [SouthAmerica] [int]  NOT NULL,\n        [Europe] [int]  NOT NULL,\n        [Africa] [int]  NOT NULL,\n        [Asia] [int]  NOT NULL\n    )\nGO\n\n-- Replace SUFFIX with the unique suffix for your resources\nCOPY INTO wwi_staging.DailySalesCounts\nFROM 'https://asadatalakers6nlej.dfs.core.windows.net/wwi-02/campaign-analytics/dailycounts.txt'\nWITH (\n    FILE_TYPE = 'CSV',\n    FIELDTERMINATOR='.',\n    ROWTERMINATOR=','\n)\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "SQLPool01",
+				"poolName": "SQLPool01"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
