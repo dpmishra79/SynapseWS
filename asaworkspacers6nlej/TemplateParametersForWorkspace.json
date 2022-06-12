@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "asaworkspacers6nlej"
+		},
+		"asacosmosdb01_connectionString": {
+			"value": ""
+		},
+		"asadatalakers6nlej_accountKey": {
+			"value": ""
+		},
+		"asastorers6nlej_connectionString": {
+			"value": ""
+		},
+		"asaworkspacers6nlej-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"sqlpool01_connectionString": {
+			"value": ""
+		},
+		"asadatalakers6nlej_properties_typeProperties_url": {
+			"value": "https://asadatalakers6nlej.dfs.core.windows.net"
+		},
+		"asakeyvaultrs6nlej_properties_typeProperties_baseUrl": {
+			"value": "https://asakeyvaultrs6nlej.vault.azure.net/"
+		},
+		"asaworkspacers6nlej-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://asadatalakers6nlej.dfs.core.windows.net"
+		}
+	}
+}
