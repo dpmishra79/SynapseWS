@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 2",
+	"properties": {
+		"content": {
+			"query": "CREATE login [asa.sql.import01]\nwith PASSWORD='@Pupu98017'\n\nGO\ncreate user [asa.sql.import01] from login  [asa.sql.import01]\n\n\ndrop user  [asa.sql.import01]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "SQLPool01",
+				"poolName": "SQLPool01"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
